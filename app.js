@@ -11,7 +11,7 @@ const client = new Snoowrap({
 });
 
 
-const comments = new CommentStream(client, { subreddit: 'testingground4bots', limit: 1000, pollTime: 10 });
+const comments = new CommentStream(client, { subreddit: 'testingground4bots', limit: 50, pollTime: 10000 });
 
 comments.on('item', (item) => {
     if(item.body == 'u/rickrollprevent'){
