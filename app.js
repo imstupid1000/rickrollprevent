@@ -11,14 +11,14 @@ const client = new Snoowrap({
 });
 
 
-const comments = new CommentStream(client, { subreddit: 'testingground4bots', limit: 20, pollTime: 10000 });
+const comments = new CommentStream(client, { subreddit: 'all', limit: 25, pollTime: 10000 });
 
 comments.on('item', (item) => {
-    if (item.body == 'u/rickrollprevention') {
+    if (item.body == 'https://youtu.be/dQw4w9WgXcQ') {
         item.reply("Click that link to get rick rolled. Want to check out my GitHub repo? [Click here.](https://github.com/imstupid1000/rickrollprevent)");
         console.log('rick roll alert!!!111 what am i doing ');
-    } else {
-        console.log("Nope.");
-    }
-
+    } else if (item.body == 'https://www.youtube.com/watch?v=dQw4w9WgXcQ') {
+        item.reply("Click that link to get rick rolled. Want to check out my GitHub repo? [Click here.](https://github.com/imstupid1000/rickrollprevent)")
+        console.log('also rick roll alerttt')
+    };
 });
