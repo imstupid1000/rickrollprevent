@@ -7,17 +7,18 @@ const client = new Snoowrap({
     clientSecret: process.env.clientSecret,
     username: process.env.userName,
     password: process.env.passWord
+    // thought ya could hack my bot?
 });
 
 
-const comments = new CommentStream(client, { subreddit: 'all', limit: 20, pollTime: 10000 });
+const comments = new CommentStream(client, { subreddit: 'testingground4bots', limit: 1000, pollTime: 10 });
 
 comments.on('item', (item) => {
-    if(item.body == 'https://youtu.be/dQw4w9WgXcQ'){
-    item.reply("Click that link to get rick rolled. (I'm a bot.)");
-    console.log(item.body);
+    if(item.body == 'u/rickrollprevent'){
+    item.reply("Click that link to get rick rolled. Want to check out my GitHub repo? [Click here.](https://github.com/imstupid1000/rickrollprevent)");
+    console.log('rick roll alert!!!111');
 } else{
-        console.log('aa');
+        console.log("Nobody gettin' rick rolled this time");
      }
     
 });
