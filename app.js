@@ -25,6 +25,10 @@ comments.on('item', (item) => {
         item.reply("Click that link to get rick rolled. Want to check out my GitHub repo? [Click here.](https://github.com/imstupid1000/rickrollprevent)")
         console.log('also rick roll alerttdcccdst')
     }
+    else if(item.body == 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'){
+        item.reply("Click that link to get rick rolled. Want to check out my GitHub repo? [Click here.](https://github.com/imstupid1000/rickrollprevent)")
+        console.log('also rick roll alerttdcccdst why')
+    }
     else{
         console.log('no')
     };
