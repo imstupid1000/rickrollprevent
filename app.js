@@ -20,5 +20,13 @@ comments.on('item', (item) => {
     } else if (item.body == 'https://www.youtube.com/watch?v=dQw4w9WgXcQ') {
         item.reply("Click that link to get rick rolled. Want to check out my GitHub repo? [Click here.](https://github.com/imstupid1000/rickrollprevent)")
         console.log('also rick roll alerttt')
+    }
+    else if (item.body == 'https://youtube.com/watch?v=dQw4w9WgXcQ') {
+        item.reply("Click that link to get rick rolled. Want to check out my GitHub repo? [Click here.](https://github.com/imstupid1000/rickrollprevent)")
+        console.log('also rick roll alerttdcccdst')
+    }
+    else{
+        console.log('no')
     };
+
 });
